@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+<script src="../FrontEnd/JavaScript/BrowserAPI's/May 20/products.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        var jsxinput = <div>
+               <h1>Lets understand the event handling input field</h1>
+               <input type="text" onKeyUp={(event)=>(console.log(event.target.value))} />
+            
+            </div>
+            ReactDOM.render(jsxinput,document.getElementById('d1'))
+    </script>
+</body>
+</html>

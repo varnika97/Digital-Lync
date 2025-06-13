@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>Hello Html Element</h1>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+
+    <script type="text/babel"> 
+        var jsh1 =document.createElement("h1")
+        jsh1.innerText = "Hello JS DOM Element"  //created by js document object
+        jsh1.style.color="red"
+        jsh1.style.backgroundColor="lightblue"
+        document.getElementById('d1').appendChild(jsh1)
+
+      // using react... react is an object
+        var rh1 = React.createElement("h1",{style:{color:"black",backgroundColor:"gold"}},"Hello React Element")
+       ReactDOM.render(rh1, document.getElementById("d2")) //h1 element using  react js library.
+       //what is the purpose of ReactDom?
+      //  Appending the react elements into the page is ReactDom
+
+
+       var jsxh1 = <h1 style={{color:"blue", backgroundColor:"lightpink"}}>Hello JSX React Element</h1>
+        ReactDom.render(jsxh1,document.getElementById("d3"))
+    </script>
+</body>
+</html>
+<!-- what is the purpose of document object..?
+    creating element (line-12) and (line-13) we made content is  inserted in that created element
+    document.getElementById('d1')---to select the element
+    appendChild(jsh1)---appending also done by document object   .
+    document object is there for  creating element, modifing the element an appending the element.. 
+
+    Reactjs is a library it is only creating Elements (UI) in less code..
+      The advantage with react is to create elements with less code
+      library is a collection of methods
+      in react we have another library to appendchild that is "ReactDom" it will also react an object that object has render
+
+
+      In react JS application development processes we got new approch we got new syntax as JSX 
+      var jsxh1 = <h1>Hello JSX React Element</h1> this jsx syntax is wrong  their is another library called "babbel" to convert this  jsx elements into react elements 
+        why we need to convert means this react elements are good but lot of code we have to write ,but in jsx element we write less code and more declarative
+      
+      -->

@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="products.js"></script>
+</head>
+<style>
+    #productlist {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        text-align: center;
+        /* font-family: Arial, Helvetica, sans-serif; */
+    }
+    #productlist li{
+        width:200px;
+        list-style: none;
+        padding:10px;
+        margin:20px
+    }
+    #productlist li img{
+        width:200px;
+        height: 200px;
+    }
+    .header ul{
+        display:flex;
+        /* border:2px solid; */
+        border-radius: 10px;
+        height:50px;
+        margin:20px;
+        margin-top: 0;
+        align-items: center;
+        background-color: lightseagreen;
+        justify-content: space-evenly;
+        
+    }
+    .header ul li{
+        list-style: none;
+        padding:50px;
+        font-size: larger;
+    }
+    .banner{
+        margin:50px;
+        border-radius: 10px;
+        padding:50px;
+        background-color:rgb(189, 190, 190);     
+    }
+    .banner h1{
+        font-size:4em;     
+    }
+    
+    .course ul{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding:20px;
+        margin:20px;
+    }
+    .course h1{
+        margin-left:30px
+    }
+    .course li{
+        border:2px solid;
+        list-style: none;
+        padding:20px;
+        margin:50px;
+        border-radius: 10px;
+        width:250px;
+        height:200px;
+        background-color: lightslategrey;
+
+    }
+</style>
+<body>
+     <!-- <h1>Using HTML Document</h1> -->
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+
+    <script type="text/babel">
+
+    // var dh1 = document.createElement('h1')
+    // dh1.innerText='Hello Using  Document Object Model'
+    // dh1.style.backgroundColor='yellow'
+    // document.getElementById('d1').appendChild(dh1)
+  
+    // var jsxh1 = <h1 style={{backgroundColor:'green'}}>Hello Using JSX Document</h1>
+    // ReactDOM.render(jsxh1,document.getElementById('d2'))
+
+
+    // var rh1 = React.createElement('h1',{style:{color:'red',backgroundColor:'skyblue'}},'Hello Using React JS Document')
+    // ReactDOM.render(rh1,document.getElementById('d3'))
+    
+   //----------------JSX Expression-------------------------
+
+//    var a =100;
+//    var b = 'Jaswitha'
+//    var jsx = <h1>This is the value of : {b} {a} </h1>
+//    ReactDOM.render(jsx,document.getElementById('d1'))
+
+    // take 2 numbers from user and print the addition of those numbers
+
+    // var x = +prompt()
+    // var y = +prompt()
+    // var jsx = <h1>Adding two varibles:{x+y}</h1>
+    // ReactDOM.render(jsx,document.getElementById('d1'))
+
+    //want to create the array of students in ul(unorderlist)
+    // var stud = ['Akhila','Bhavani','Chandrika','Devi','Gowri']
+    // var jsx = <ul><b>List of students are:</b>
+    //         {
+    //             stud.map((s)=>{
+    //                 return <li>{s}</li>
+    //             })
+    //         }
+    //     </ul>
+    // ReactDOM.render(jsx,document.getElementById('d1'))
+
+ // concatinating the strings...
+//   var s1 = 'Jaswitha'
+//   var s2 = 'Appaiahgari'
+//   var jsx = <h1>{s1+s2}</h1>
+//   ReactDOM.render(jsx,document.getElementById('d1'))
+
+     //print greatest number
+        // var x = +prompt()
+        // var y = +prompt()
+       // var jsx = <h1>which is greater number: {x>y?x:y}</h1>
+        // ReactDOM.render(jsx,document.getElementById('d1'))
+
+    // print even or odd
+    // var a = +prompt()
+    // var jsx = <h1>{a%2==0?'Even':'Odd'}</h1>
+    // ReactDOM.render(jsx,document.getElementById('d1'))
+
+        //print interger value
+    //   var x = prompt()
+    //   var jsx = <h1>{parseInt(x)}</h1>  
+    //   ReactDOM.render(jsx,document.getElementById('d1'))
+
+       // reverse the string
+        //    var str = 'Varnika'
+        //  var jsx = <h1>{str.split("").reverse().join('')}</h1>
+        //  ReactDOM.render(jsx,document.getElementById('d1'))
+
+//-------Conditional Rendering----------------------
+//    var a1 = +prompt()
+//    var jsx = <div>
+//         {
+//             a1%2==0 &&(<h1>The given number is: Even</h1>)
+//         }
+//         {
+//             a1%2==1 && (<h1>The given number is: Odd</h1>)
+//         }
+//         {
+//             isNaN(a1) && (<h1>You sh**** enter the Number</h1>)
+//         }
+//     </div>
+//     ReactDOM.render(jsx,document.getElementById('d2'))
+
+//-------Conditional Styling----------------------
+//    var m = +prompt()
+//    var jsx = <h1 style = {m%2==0?{color:'green'}:{color:'red'}}>Given number is Even gives green if odd gives red</h1>
+//    ReactDOM.render(jsx,document.getElementById('d2'))
+
+//-------Eventhandlings----------------------
+
+//   var jsx = <div>
+//     <h1>Lets understand JSX Event Handling</h1>
+//     <button onClick={()=>alert('Hello')}>Click Me!!</button>
+//     </div>
+//     ReactDOM.render(jsx,document.getElementById('d1'))
+
+//-------Eventhandling Input----------------------
+    // var jsx = <div>
+    //        <h1>Lets understand JSX Event Handling</h1>
+    //        <input type="text" onKeyUp={(event)=>{console.log(event.target.value)}}/>
+    //     </div>
+    //   ReactDOM.render(jsx,document.getElementById('d1'))
+
+//-------UI Generation List---------------------
+// var jsx = <ul id="productlist">{
+//      products.map((p)=>{
+//         return <li>
+//             <img src={p.image}/>
+
+//             {p.title}
+
+//              <p>Rs.{p.price}</p>
+//              </li>
+//      })
+//     }
+//     </ul>
+//    ReactDOM.render(jsx,document.getElementById('d2'))
+
+//-------UI Generation Table---------------------
+
+//   var jsx = <table border="2">
+//             <thead>
+//                 <tr>
+//                   <th>Title</th>
+//                   <th>Description</th>
+//                   <th>Price</th>
+//                   <th>Image</th>  
+//                 </tr>
+//             </thead>
+//         <tbody>{
+//             products.map((p)=>{
+//                 return <tr>
+//                 <td>{p.title}</td>
+//                 <td>{p.description}</td>
+//                 <td>{p.price}</td>
+//                 <td>
+//             <img style={{width:'100px'}} src={p.image}/>    
+//                 </td>
+//                     </tr>
+//             })
+//         }
+//         </tbody>
+//     </table>
+//    ReactDOM.render(jsx,document.getElementById('d2'))
+
+//JSX Components
+        function Header(){
+            return <div class="header">
+            <ul>
+                <li>Courses</li>
+                <li>Services</li>
+                <li>Products</li>
+                <li>Contact</li>
+                </ul>
+            </div>
+        }
+        function Banner(){
+             return <div class="banner">
+                 <h1>Best Training for ReactJS</h1>
+                <p>A short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative. Compared to novels, short stories are shorter in length, ranging from around 1,000 toA short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative. Compared to novels, short stories are shorter in length, ranging from around 1,000 toA short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative. Compared to novels, short stories are shorter in length, ranging from around 1,000 toA short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative. Compared to novels, short stories are shorter in length, ranging from around 1,000 toA short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative.
+                    </p>
+                </div>
+        }
+        function Courses(){
+            return <div class="course">
+                    <h1>Our Popular courses</h1>
+                    <ul>
+                        <li>ReactJs</li>
+                        <li>JavaScript</li>
+                        <li>Angular</li>
+                        <li>NodeJS</li>
+                        <li>ExpressJS</li>
+                        <li>VueJS</li>
+                        <li>ReactJS</li>
+                        <li>HTML</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+        }
+     function App(){
+        return <div>
+            <Header></Header>
+            <Banner></Banner>
+            <Courses></Courses>
+            </div>
+     }
+         
+    
+    ReactDOM.render(<App></App>,document.getElementById('d2'))
+   </script>
+</body>
+</html>

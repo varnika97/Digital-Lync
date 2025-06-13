@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+<script src="products.js"></script>
+</head>
+ <style>
+    #productlist{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    #productlist li{
+        width:200px;
+        list-style: none;
+        margin:20px;
+    }
+    #productlist li img{
+        width:100%;
+        height:200px
+    }
+ </style>
+<body>
+     <div id="d1"></div>
+    <!-- display list for given data -->
+    <script type="text/babel">
+ //How can i display the data in UI(browser) means by using jsx we can generate.
+        //  first i have to generate the list items for each product one list item should be generated
+
+        var jsxul = <ul id="productlist">
+                     {
+                      products.map(function(p){
+                        return <li>
+                            <img src={p.image} alt="images"/>
+                            
+                            {p.title}
+                          <p>Rs.{p.price}</p>
+                            </li>
+                      })                     //here we can use forEach for looping but foreach can't return an array it only prints in console not in browser so that we r using map function which it returns something.
+                        //  if we keep p.title in <li> it will be considered as text ,to considered it as javascript  we have to keep {}
+
+                   
+                     }
+                  </ul>
+            ReactDOM.render(jsxul,document.getElementById('d1'))
+          //  console.log(products)
+    </script>
+    
+</body>
+</html>

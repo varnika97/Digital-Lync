@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+<script src="products.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        var jsxtable = <table border="2">
+                          <thead>
+                        <tr>
+                           <th>Title</th>
+                           <th>Description</th>
+                           <th>price</th>
+                           <th>image</th>   
+                          </tr>
+                          </thead>   
+                    <tbody>
+                       {
+                        products.map((p)=>{
+                            return <tr>
+                                    <td>{p.title}</td>
+                                    <td>{p.description}</td>
+                                    <td>{p.price}</td>
+                                    <td>
+                                        <img src={p.image} width="90px" alt="images"/>
+                                    </td>
+                                </tr>
+                        })
+                       }                          
+                        </tbody>                         
+                 </table>
+             ReactDOM.render(jsxtable,document.getElementById('d1'))
+
+    </script>
+</body>
+</html>

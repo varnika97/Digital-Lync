@@ -1,0 +1,9 @@
+
+ function Banner(){
+             return <div class="banner">
+                 <h1>Best Training for ReactJS</h1>
+                <p>A short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative. Compared to novels, short stories are shorter in length, ranging from around 1,000 toA short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative. Compared to novels, short stories are shorter in length, ranging from around 1,000 toA short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative. Compared to novels, short stories are shorter in length, ranging from around 1,000 toA short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative. Compared to novels, short stories are shorter in length, ranging from around 1,000 toA short story is a brief piece of prose fiction, typically focused on a single incident or a series of linked events, aiming to evoke a specific effect or mood. It often features a limited number of characters, a contained setting, and a concise narrative.
+                    </p>
+                </div>
+        }
+export default Banner;
